@@ -6,6 +6,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.SeekBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
     private TextView nicenessTextView;
@@ -30,11 +31,14 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onStartTrackingTouch(SeekBar seekBar) {
+                Toast.makeText(getApplicationContext(),"You touch",Toast.LENGTH_LONG).show();
 
             }
 
             @Override
             public void onStopTrackingTouch(SeekBar seekBar) {
+                Toast.makeText(getApplicationContext(),"You Stop touch",Toast.LENGTH_LONG).show();
+
 
             }
         });
