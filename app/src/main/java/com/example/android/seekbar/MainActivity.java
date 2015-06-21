@@ -16,7 +16,11 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         nicenessTextView = (TextView)findViewById(R.id.nicenessTextView);
+
         seekBar = (SeekBar)findViewById(R.id.seekBar);
+
+        nicenessTextView.setText("Niceness: " + seekBar.getProgress()+ "/" + seekBar.getMax());
+
         seekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
